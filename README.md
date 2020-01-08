@@ -1,5 +1,6 @@
 # public-gpg
-This document will explain how to import my gpg key. The public can be found at
+This document will explain how to import my gpg key. And verifying signatures as
+well as adding the fingerprint to trusted fingerprints. The public can be found at
 http://keys.gnupg.net/pks/lookup?op=get&search=0xBBE9890B714435ED
 
 More convenient you can download the key with:
