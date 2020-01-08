@@ -1,25 +1,26 @@
 # public-gpg
-This document will explain how to import my gpg key. And verifying signatures as
-well as adding the fingerprint to trusted fingerprints. The public can be found at
+This document will explain how to import my gpg key and how to verify signatures, as
+well as adding the fingerprint to trusted fingerprints. The public key can be found at
 http://keys.gnupg.net/pks/lookup?op=get&search=0xBBE9890B714435ED
 
-More convenient you can download the key with:
+You can download this key more conveniently by running this command:
 
 `wget https://raw.githubusercontent.com/Regamii/public-gpg/master/public.gpg`
 
-To import the downloaded key you can issue the command:
+To import the downloaded key, you can issue the command:
 
 `gpg --import public.gpg`
 
-Now with the key imported signed files can be verified. sample.txt is a file that is
-signed. This can be verified using the sample.txt.asc.
+With the imported key, signed files can be verified. 
+Sample.txt is a file which has been signed. 
+This can be verified using the sample.txt.asc.
 
-Verify the signature of sample.txt:
+To verify the signature of sample.txt:
 
 `gpg --verify sample.txt.asc`
 
 My gpg fingerprint is "3DCF CF94 563E 1446 EBE2  4F1A BBE9 890B 7144 35ED" The output
-should show "Good signature" and the Primary key fingerprint should match what's
+should show "Good signature" and the primary key fingerprint should match with the data
 shown below:
 
 ```
@@ -32,7 +33,7 @@ gpg:          There is no indication that the signature belongs to the owner.
 Primary key fingerprint: 3DCF CF94 563E 1446 EBE2  4F1A BBE9 890B 7144 35ED
 ```
 
-To get rid of the warning and thus adding the key to trusted signatures issue this command:
+To get rid of the warning and thus adding the key to trusted fingerprints, issue this command:
 
 `gpg --fingerprint 3DCFCF94563E1446EBE24F1ABBE9890B714435ED`
 
@@ -43,4 +44,4 @@ uid           [ unknown] Wybren Terpstra <wterpstra@protonmail.com>
 sub   rsa4096 2019-11-11 [E]
 ```
 
-The above output will verify that indeed the key is added to trusted identities.
+The above output will verify that indeed the fingerprint is added to trusted identities.
